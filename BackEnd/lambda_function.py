@@ -11,7 +11,7 @@ from botocore.vendored import requests
 
 def lambda_handler(event, context):
     # TODO implement
-    print("hello from here")
+    print("hello from here Deployeddd")
     print(event)
     #event['queryStringParameters']['q']
     text = event['queryStringParameters']['q']
