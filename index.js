@@ -83,9 +83,11 @@ function searchFromVoice() {
 
     apigClient.searchGet(params, body, additionalParams)
       .then(function (result) {
-        console.log('success OK');
-        showImages(result.data.results);
-        console.log(result.data.results);
+        console.log(result);
+        console.log(result.data);
+        console.log(result.data.body);
+        showImages(result.data.body.results);
+        //console.log(result.data.body.results);
       }).catch(function (result) {
         console.log(result);
         console.log(speechToText);
@@ -134,6 +136,7 @@ function showImages(res) {
     newDiv.removeChild(newDiv.firstChild);
   }
 }
+  console.log("hello from image");
   console.log(res);
   if (res.length == 0) {
       console.log("Inside if");
